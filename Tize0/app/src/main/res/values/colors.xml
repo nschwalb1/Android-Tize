@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff21846d</color>
+    <color name="colorPrimaryDark">#6B6C6B</color>
+    <color name="colorAccent">#F58865</color>
+
+    <color name="lvHeaderTextColor">#ff21846d</color>
+    <color name="primaryTextColor">#333333</color>
+    <color name="secondaryTextColor">#777777</color>
+
+    <color name="tizeGreen">#ff21846d</color>
+    <color name="tizeDarkGray">#6B6C6B</color>
+    <color name="tizeLightGray">#A7A8A6</color>
+    <color name="tizeOrange">#F58865</color>
+    <color name="goblinGreen">#168686</color>
+    <color name="lvHeaderDividerColor">#ff21846d</color>
+    <color name="lvDividerColor">#E0E0E0</color>
+</resources>

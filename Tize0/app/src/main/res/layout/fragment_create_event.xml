@@ -1,0 +1,341 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+            android:layout_height="match_parent" android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            tools:context="com.graywolftechnoligies.tize.CreateEvent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Event Name:"
+                android:id="@+id/EventNameTag"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/EventNameInput"
+                android:layout_below="@+id/EventNameTag"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Location:"
+                android:id="@+id/LocationTag"
+                android:layout_below="@+id/EventNameInput"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/LocationInput"
+                android:layout_below="@+id/LocationTag"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Start Time:"
+                android:id="@+id/StartTimeTag"
+                android:layout_below="@+id/LocationInput"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:clickable="true"
+                android:id="@+id/StartDateInput"
+                android:layout_below="@+id/StartTimeTag"
+                style="@android:style/Widget.EditText"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                style="@android:style/Widget.EditText"
+                android:id="@+id/StartTimeInput"
+                android:layout_alignTop="@+id/StartDateInput"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="End Time:"
+                android:id="@+id/EndTimeTag"
+                android:layout_below="@+id/StartDateInput"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/EndDateInput"
+                android:layout_below="@+id/EndTimeTag"
+                style="@android:style/Widget.EditText"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                style="@android:style/Widget.EditText"
+                android:id="@+id/EndTimeInput"
+                android:layout_alignTop="@+id/EndDateInput"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="About:"
+                android:id="@+id/AboutTag"
+                android:layout_below="@+id/EndDateInput"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/AboutInput"
+                android:layout_below="@+id/AboutTag"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:lines="5" />
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/EventIconScroller"
+                android:clickable="true"
+                android:layout_below="@+id/AboutInput"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/EventIconContainer">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:id="@+id/iconRadioGroup">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:button="@drawable/tize_icon"
+                            android:id="@+id/tizeIconButton"
+                            android:cropToPadding="false"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:id="@+id/entertainmentIconButton"
+                            android:button="@drawable/entertainment_icon"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:id="@+id/drinksIconButton"
+                            android:button="@drawable/drinks_icon"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:id="@+id/heartIconButton"
+                            android:button="@drawable/heart_icon"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:id="@+id/handshakeIconButton"
+                            android:button="@drawable/handshake_icon"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:id="@+id/coffeeIconButton"
+                            android:button="@drawable/coffee_icon"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:id="@+id/foodIconButton"
+                            android:button="@drawable/food_icon"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:id="@+id/meetingIconButton"
+                            android:button="@drawable/meeting_icon"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:id="@+id/movieIconButton"
+                            android:button="@drawable/movie_icon"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:id="@+id/musicIconButton"
+                            android:button="@drawable/music_icon"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:id="@+id/natureIconButton"
+                            android:button="@drawable/nature_icon"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:id="@+id/outdoorsIconButton"
+                            android:button="@drawable/outdoors_icon"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:id="@+id/partyIconButton"
+                            android:button="@drawable/party_icon"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:id="@+id/presentIconButton"
+                            android:button="@drawable/present_icon"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:id="@+id/sportsIconButton"
+                            android:button="@drawable/sports_icon"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:id="@+id/studyIconButton"
+                            android:button="@drawable/study_icon"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:id="@+id/trophyIconButton"
+                            android:button="@drawable/trophy_icon"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="iconRadioButtonClicked"
+                            android:id="@+id/tvIconButton"
+                            android:button="@drawable/tv_icon"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true" />
+
+                    </RadioGroup>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invite Friends"
+                android:id="@+id/InviteFriendsButton"
+                android:layout_below="@+id/EventIconScroller"
+                android:layout_centerHorizontal="true" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+

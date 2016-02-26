@@ -1,0 +1,87 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/loginScrollView"
+    tools:context="com.graywolftechnologies.tize.LoginActivity"
+    android:background="@color/colorPrimary">
+    <RelativeLayout
+        android:id="@+id/username_login_form"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/tizeLoginImage"
+            android:src="@drawable/loginscreen"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:id="@+id/username"
+            android:hint="username"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif"
+            android:layout_below="@id/tizeLoginImage"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/signup_edittext_background"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:textColor="#585958" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:inputType="textPassword"
+            android:hint="password"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif"
+            android:id="@+id/password"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/username"
+            android:background="@drawable/signup_edittext_background"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:textColor="#585958" />
+
+        <Button android:id="@+id/login_button"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="LOGIN"
+            android:clickable="true"
+            android:background="@drawable/button_pressed_background"
+            android:textColor="#ffffff"
+            android:textSize="23sp"
+            android:fontFamily="sans-serif"
+            android:layout_below="@+id/password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:elevation="5dp" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="SIGN UP"
+            android:id="@+id/signup_button"
+            android:clickable="true"
+            android:background="@drawable/button_pressed_background"
+            android:textColor="#ffffff"
+            android:textSize="23sp"
+            android:fontFamily="sans-serif"
+            android:layout_below="@+id/login_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:elevation="5dp"
+            android:layout_marginBottom="10dp" />
+
+    </RelativeLayout>
+
+</ScrollView>
